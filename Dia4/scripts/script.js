@@ -96,6 +96,7 @@ while (booleano === true) {
         6.Salir de Cafeteria Campuslands
         `);
 
+//Menu de categorias        
     if (menuprincipal === '1') {
         let booleano = true;
         while (booleano === true) {
@@ -155,10 +156,79 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero de la categoria que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre de la categoria');
-                let descr = prompt ('Ingrese la descripcion de la nueva categoria');
+                let descr = prompt('Ingrese la descripcion de la nueva categoria');
 
-                categorias[num -1]["nombre"]= nomb;
-                categorias[num-1]["descripcion"]= descr;
+                categorias[num - 1]["nombre"] = nomb;
+                categorias[num - 1]["descripcion"] = descr;
+            } else if (menucategorias === '5') {
+                booleano = false;
+            };
+        };
+    }
+//Menu de chefs
+    else if (menuprincipal === '2') {
+        let booleano = true;
+        while (booleano === true) {
+            let menucategorias = prompt(`===============================
+                Menu de  categorías de hamburguesas
+                ===============================
+                Seleccione una opción:
+                1.Registrar nueva categoría
+                2.Listar categorías
+                3.Eliminar categoría
+                4.Modificar categoría
+                5.Salir
+                `);
+
+            if (menucategorias === '1') {
+                alert('Registrar nueva categoria');
+                let nombre = prompt('Escriba el nombre de la categoria que quiera agregar: ');
+                let descripcion = prompt('Escriba la descripcion de la nueva categoria');
+
+                categorias.push({
+                    "nombre": nombre,
+                    "descripcion": descripcion,
+                })
+
+            } else if (menucategorias === '2') {
+                alert('Listar cataegorias');
+                let largo = categorias.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "categorias# " + (i + 1) + "\n" +
+                        "nombre: " + categorias[i]["nombre"] + "\n" +
+                        "descripcion: " + categorias[i]["descripcion"]
+                    )
+                }
+            } else if (menucategorias === '3') {
+                alert('Eliminar categoria');
+                let largo = categorias.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "categorias# " + (i + 1) + "\n" +
+                        "nombre: " + categorias[i]["nombre"] + "\n" +
+                        "descripcion: " + categorias[i]["descripcion"]
+                    )
+                }
+                let eliminar = prompt('Ingrese el id de la categoria que quiera eliminar');
+                categorias.splice(eliminar - 1, 1);
+
+            } else if (menucategorias === '4') {
+                alert('Modificar categoria')
+                let largo = categorias.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "categorias# " + (i + 1) + "\n" +
+                        "nombre: " + categorias[i]["nombre"] + "\n" +
+                        "descripcion: " + categorias[i]["descripcion"]
+                    )
+                }
+                let num = prompt('Ingrese el numero de la categoria que quera editar');
+                let nomb = prompt('Ingrese el nuevo nombre de la categoria');
+                let descr = prompt('Ingrese la descripcion de la nueva categoria');
+
+                categorias[num - 1]["nombre"] = nomb;
+                categorias[num - 1]["descripcion"] = descr;
             } else if (menucategorias === '5') {
                 booleano = false;
             };
