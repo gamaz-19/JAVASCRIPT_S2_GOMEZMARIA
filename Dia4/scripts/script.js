@@ -2,7 +2,6 @@
 //################ QUIZ #####################-
 //###########################################-
 
-
 //Diccionarios
 
 let categorias = [
@@ -94,7 +93,7 @@ while (booleano === true) {
         4.Ingredientes
         5.Salir de Cafeteria Campuslands
         `);
-
+//Menu categorias
     if (menuprincipal === '1') {
         let booleano = true;
         while (booleano === true) {
@@ -154,15 +153,16 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero de la categoria que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre de la categoria');
-                let descr = prompt ('Ingrese la descripcion de la nueva categoria');
+                let descr = prompt('Ingrese la descripcion de la nueva categoria');
 
-                categorias[num -1]["nombre"]= nomb;
-                categorias[num-1]["descripcion"]= descr;
+                categorias[num - 1]["nombre"] = nomb;
+                categorias[num - 1]["descripcion"] = descr;
             } else if (menucategorias === '5') {
                 booleano = false;
             };
         };
     }
+//Menu chefs
     else if (menuprincipal === '2') {
         let booleano = true;
         while (booleano === true) {
@@ -222,15 +222,16 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero del chef que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre del chef');
-                let descr = prompt ('Ingrese la nueva especialidad del chef');
+                let descr = prompt('Ingrese la nueva especialidad del chef');
 
-                chefs[num -1]["nombre"]= nomb;
-                chefs[num-1]["especialidad"]= descr;
+                chefs[num - 1]["nombre"] = nomb;
+                chefs[num - 1]["especialidad"] = descr;
             } else if (menuchefs === '5') {
                 booleano = false;
             };
         };
     }
+//Menu hamburguesas
     else if (menuprincipal === '3') {
         let booleano = true;
         while (booleano === true) {
@@ -256,9 +257,9 @@ while (booleano === true) {
                 hamburguesas.push({
                     "nombre": nombre,
                     "categoria": categoria,
-                    "ingredientes" : ingredientes,
-                    "precio" : precio,
-                    "chef" : chef,
+                    "ingredientes": ingredientes,
+                    "precio": precio,
+                    "chef": chef,
                 })
 
             } else if (menucategorias === '2') {
@@ -305,22 +306,23 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero de la hamburguesa que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre de la hamburguesa');
-                let categ = prompt ('Ingrese la categoria de la nueva hamburguesa');
-                let ingr= prompt('Ingrese los nuevos ingredientes de la nueva hamburguesa');
+                let categ = prompt('Ingrese la categoria de la nueva hamburguesa');
+                let ingr = prompt('Ingrese los nuevos ingredientes de la nueva hamburguesa');
                 let prec = prompt('Ingrese el precio para la nueva hamburguesa');
                 let che = prompt('Ingrese el nombre del chef que preparo la hamburguesa');
 
-                hamburguesas[num -1]["nombre"]= nomb;
-                hamburguesas[num-1]["categoria"]= categ;
-                hamburguesas[num-1]["ingredientes"]= ingr;
-                hamburguesas[num-1]["precio"]= prec;
-                hamburguesas[num-1]["chef"]= che;
-                
+                hamburguesas[num - 1]["nombre"] = nomb;
+                hamburguesas[num - 1]["categoria"] = categ;
+                hamburguesas[num - 1]["ingredientes"] = ingr;
+                hamburguesas[num - 1]["precio"] = prec;
+                hamburguesas[num - 1]["chef"] = che;
+
             } else if (menucategorias === '5') {
                 booleano = false;
             };
         };
     }
+//Menu ingredientes
     else if (menuprincipal === '4') {
         let booleano = true;
         while (booleano === true) {
@@ -345,8 +347,8 @@ while (booleano === true) {
                 categorias.push({
                     "nombre": nombre,
                     "descripcion": descripcion,
-                    "precio" : precio,
-                    "stock" : stock,
+                    "precio": precio,
+                    "stock": stock,
                 })
 
             } else if (menucategorias === '2') {
@@ -390,30 +392,24 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero del ingrediente que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre del ingrediente');
-                let descr = prompt ('Ingrese la descripcion del nuevo ingrediente');
+                let descr = prompt('Ingrese la descripcion del nuevo ingrediente');
                 let prec = prompt('Ingrese el precio del nuevo ingrediente');
                 let sto = prompt('Ingrese el stock del nuevo ingrediente');
 
-                ingredientes[num -1]["nombre"]= nomb;
-                ingredientes[num-1]["descripcion"]= descr;
-                ingredientes[num -1]["precio"]= prec;
-                ingredientes[num-1]["stock"]= sto;
+                ingredientes[num - 1]["nombre"] = nomb;
+                ingredientes[num - 1]["descripcion"] = descr;
+                ingredientes[num - 1]["precio"] = prec;
+                ingredientes[num - 1]["stock"] = sto;
 
             } else if (menucategorias === '5') {
                 booleano = false;
             };
         };
     }
-    else if (menuprincipal === '5'){
+    else if (menuprincipal === '5') {
         booleano = false;
     };
 }
-
-
-
-
-
-
 
 
 //Desarrollado por: Maria Alejandra Gomez Archila - cc.1005234916
