@@ -92,8 +92,7 @@ while (booleano === true) {
         2.Chefs
         3.Hamburguesas
         4.Ingredientes
-        5.Consultas opcionales
-        6.Salir de Cafeteria Campuslands
+        5.Salir de Cafeteria Campuslands
         `);
 
     if (menuprincipal === '1') {
@@ -405,6 +404,9 @@ while (booleano === true) {
             };
         };
     }
+    else if (menuprincipal === '5'){
+        booleano = false;
+    };
 }
 
 
