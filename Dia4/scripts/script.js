@@ -96,12 +96,11 @@ while (booleano === true) {
         6.Salir de Cafeteria Campuslands
         `);
 
-//Menu de categorias        
     if (menuprincipal === '1') {
         let booleano = true;
         while (booleano === true) {
             let menucategorias = prompt(`===============================
-                Menu de  categorías de hamburguesas
+                Menu de  categorías de hamburguesas - CATEGORIAS
                 ===============================
                 Seleccione una opción:
                 1.Registrar nueva categoría
@@ -156,80 +155,79 @@ while (booleano === true) {
                 }
                 let num = prompt('Ingrese el numero de la categoria que quera editar');
                 let nomb = prompt('Ingrese el nuevo nombre de la categoria');
-                let descr = prompt('Ingrese la descripcion de la nueva categoria');
+                let descr = prompt ('Ingrese la descripcion de la nueva categoria');
 
-                categorias[num - 1]["nombre"] = nomb;
-                categorias[num - 1]["descripcion"] = descr;
+                categorias[num -1]["nombre"]= nomb;
+                categorias[num-1]["descripcion"]= descr;
             } else if (menucategorias === '5') {
                 booleano = false;
             };
         };
     }
-//Menu de chefs
-    else if (menuprincipal === '2') {
+    if (menuprincipal === '2') {
         let booleano = true;
         while (booleano === true) {
-            let menucategorias = prompt(`===============================
-                Menu de  categorías de hamburguesas
+            let menuchefs = prompt(`===============================
+                Menu de  categorías de hamburguesas - CHEFS
                 ===============================
                 Seleccione una opción:
-                1.Registrar nueva categoría
-                2.Listar categorías
-                3.Eliminar categoría
-                4.Modificar categoría
+                1.Registrar nuevo chef
+                2.Listar chefs
+                3.Eliminar chefs
+                4.Modificar chefs
                 5.Salir
                 `);
 
-            if (menucategorias === '1') {
-                alert('Registrar nueva categoria');
-                let nombre = prompt('Escriba el nombre de la categoria que quiera agregar: ');
-                let descripcion = prompt('Escriba la descripcion de la nueva categoria');
+            if (menuchefs === '1') {
+                alert('Registrar nuevo chef');
+                let nombre = prompt('Escriba el nombre del chef que quiera agregar: ');
+                let especialidad = prompt('Escriba la especialidad del chef');
 
-                categorias.push({
+                chefs.push({
                     "nombre": nombre,
-                    "descripcion": descripcion,
+                    "especialidad": especialidad,
                 })
 
-            } else if (menucategorias === '2') {
-                alert('Listar cataegorias');
-                let largo = categorias.length;
+            } else if (menuchefs === '2') {
+                alert('Listar chefs');
+                let largo = chefs.length;
                 for (let i = 0; i < largo; i++) {
                     alert(
-                        "categorias# " + (i + 1) + "\n" +
-                        "nombre: " + categorias[i]["nombre"] + "\n" +
-                        "descripcion: " + categorias[i]["descripcion"]
+                        "chefs# " + (i + 1) + "\n" +
+                        "nombre: " + chefs[i]["nombre"] + "\n" +
+                        "especialidad: " + chefs[i]["especialidad"]
                     )
                 }
-            } else if (menucategorias === '3') {
-                alert('Eliminar categoria');
-                let largo = categorias.length;
+            } else if (menuchefs === '3') {
+                alert('Eliminar chef');
+                let largo = chefs.length;
                 for (let i = 0; i < largo; i++) {
                     alert(
-                        "categorias# " + (i + 1) + "\n" +
-                        "nombre: " + categorias[i]["nombre"] + "\n" +
-                        "descripcion: " + categorias[i]["descripcion"]
+                        "chefs# " + (i + 1) + "\n" +
+                        "nombre: " + chefs[i]["nombre"] + "\n" +
+                        "especialidad: " + chefs[i]["especialidad"]
                     )
                 }
-                let eliminar = prompt('Ingrese el id de la categoria que quiera eliminar');
-                categorias.splice(eliminar - 1, 1);
+                let eliminar = prompt('Ingrese el id del chef que quiera eliminar');
+                chefs.splice(eliminar - 1, 1);
 
-            } else if (menucategorias === '4') {
-                alert('Modificar categoria')
-                let largo = categorias.length;
+            } else if (menuchefs === '4') {
+                alert('Modificar chef')
+                let largo = chefs.length;
                 for (let i = 0; i < largo; i++) {
                     alert(
-                        "categorias# " + (i + 1) + "\n" +
-                        "nombre: " + categorias[i]["nombre"] + "\n" +
-                        "descripcion: " + categorias[i]["descripcion"]
+                        "chefs# " + (i + 1) + "\n" +
+                        "nombre: " + chefs[i]["nombre"] + "\n" +
+                        "especialidad: " + chefs[i]["especialidad"]
                     )
                 }
-                let num = prompt('Ingrese el numero de la categoria que quera editar');
-                let nomb = prompt('Ingrese el nuevo nombre de la categoria');
-                let descr = prompt('Ingrese la descripcion de la nueva categoria');
+                let num = prompt('Ingrese el numero del chef que quera editar');
+                let nomb = prompt('Ingrese el nuevo nombre del chef');
+                let descr = prompt ('Ingrese la nueva especialidad del chef');
 
-                categorias[num - 1]["nombre"] = nomb;
-                categorias[num - 1]["descripcion"] = descr;
-            } else if (menucategorias === '5') {
+                chefs[num -1]["nombre"]= nomb;
+                chefs[num-1]["especialidad"]= descr;
+            } else if (menuchefs === '5') {
                 booleano = false;
             };
         };
