@@ -322,6 +322,89 @@ while (booleano === true) {
             };
         };
     }
+    else if (menuprincipal === '4') {
+        let booleano = true;
+        while (booleano === true) {
+            let menucategorias = prompt(`===============================
+                Menu de ingredientes
+                ===============================
+                Seleccione una opción:
+                1.Registrar nuevos ingredientes
+                2.Listar ingredientes
+                3.Eliminar ingredientes
+                4.Modificar ingredientes
+                5.Salir
+                `);
+
+            if (menucategorias === '1') {
+                alert('Registrar nuevos ingredientes');
+                let nombre = prompt('Escriba el nombre de la categoria que quiera agregar: ');
+                let descripcion = prompt('Escriba la descripcion de la nueva categoria');
+                let precio = prompt('Escriba el precio de los ingredientes');
+                let stock = prompt('Escriba el nuemro de stock de los ingredientes');
+
+                categorias.push({
+                    "nombre": nombre,
+                    "descripcion": descripcion,
+                    "precio" : precio,
+                    "stock" : stock,
+                })
+
+            } else if (menucategorias === '2') {
+                alert('Listar ingredientes');
+                let largo = ingredientes.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "ingrediente# " + (i + 1) + "\n" +
+                        "nombre: " + ingredientes[i]["nombre"] + "\n" +
+                        "descripcion: " + ingredientes[i]["descripcion"] + "\n" +
+                        "precio: " + ingredientes[i]["precio"] + "\n" +
+                        "stock: " + ingredientes[i]["stock"]
+                    )
+                }
+            } else if (menucategorias === '3') {
+                alert('Eliminar ingredientes');
+                let largo = ingredientes.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "ingredientes# " + (i + 1) + "\n" +
+                        "nombre: " + ingredientes[i]["nombre"] + "\n" +
+                        "descripcion: " + ingredientes[i]["descripcion"] + "\n" +
+                        "precio: " + ingredientes[i]["precio"] + "\n" +
+                        "stock: " + ingredientes[i]["stock"]
+                    )
+                }
+                let eliminar = prompt('Ingrese el id de los ingredientes que quiera eliminar');
+                ingredientes.splice(eliminar - 1, 1);
+
+            } else if (menucategorias === '4') {
+                alert('Modificar ingredientes')
+                let largo = ingredientes.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "ingredientes# " + (i + 1) + "\n" +
+                        "nombre: " + ingredientes[i]["nombre"] + "\n" +
+                        "descripcion: " + ingredientes[i]["descripcion"] + "\n" +
+                        "precio: " + ingredientes[i]["precio"] + "\n" +
+                        "stock: " + ingredientes[i]["stock"]
+                    )
+                }
+                let num = prompt('Ingrese el numero del ingrediente que quera editar');
+                let nomb = prompt('Ingrese el nuevo nombre del ingrediente');
+                let descr = prompt ('Ingrese la descripcion del nuevo ingrediente');
+                let prec = prompt('Ingrese el precio del nuevo ingrediente');
+                let sto = prompt('Ingrese el stock del nuevo ingrediente');
+
+                ingredientes[num -1]["nombre"]= nomb;
+                ingredientes[num-1]["descripcion"]= descr;
+                ingredientes[num -1]["precio"]= prec;
+                ingredientes[num-1]["stock"]= sto;
+
+            } else if (menucategorias === '5') {
+                booleano = false;
+            };
+        };
+    }
 }
 
 
