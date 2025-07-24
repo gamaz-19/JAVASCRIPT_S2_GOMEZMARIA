@@ -91,9 +91,10 @@ while (booleano === true) {
         2.Chefs
         3.Hamburguesas
         4.Ingredientes
-        5.Salir de Cafeteria Campuslands
+        5.Consultas extra
+        6.Salir de Cafeteria Campuslands
         `);
-//Menu categorias
+    //Menu categorias
     if (menuprincipal === '1') {
         let booleano = true;
         while (booleano === true) {
@@ -162,7 +163,7 @@ while (booleano === true) {
             };
         };
     }
-//Menu chefs
+    //Menu chefs
     else if (menuprincipal === '2') {
         let booleano = true;
         while (booleano === true) {
@@ -231,7 +232,7 @@ while (booleano === true) {
             };
         };
     }
-//Menu hamburguesas
+    //Menu hamburguesas
     else if (menuprincipal === '3') {
         let booleano = true;
         while (booleano === true) {
@@ -322,7 +323,7 @@ while (booleano === true) {
             };
         };
     }
-//Menu ingredientes
+    //Menu ingredientes
     else if (menuprincipal === '4') {
         let booleano = true;
         while (booleano === true) {
@@ -405,11 +406,39 @@ while (booleano === true) {
                 booleano = false;
             };
         };
+    } else if (menuprincipal === '5') {
+        let booleano = true;
+        while (booleano === true) {
+            let menucategorias = prompt(`===============================
+                Menu de ingredientes
+                ===============================
+                Seleccione una opción:
+                1. Encontrar todos los ingredientes con stock menor a 400.
+                2. Encontrar todas las hamburguesas de la categoría “Vegetariana”.
+                3. Encontrar todos los chefs que se especializan en “Carnes”.
+                4. Aumentar en 1.5 el precio de todos los ingredientes.
+                5. Encontrar todas las hamburguesas preparadas por “ChefB”.
+                6. Salir
+                `);
+            if (menucategorias === '1') {
+                let mensaje =""
+                
+                let largo = ingredientes.length;
+                for (let i = 0; i < largo; i++) {
+                    let unico = ingredientes[i]["stock"];
+                    
+                    if (unico < 400){
+                        
+                        mensaje += `stock:  \n${ingredientes[i]["stock"]}`
+                    }
+                }
+                alert (mensaje)
+            };
+            };
+        } else if (menuprincipal === '6') {
+            booleano = false;
+        }
     }
-    else if (menuprincipal === '5') {
-        booleano = false;
-    };
-}
 
 
 //Desarrollado por: Maria Alejandra Gomez Archila - cc.1005234916
