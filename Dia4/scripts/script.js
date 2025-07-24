@@ -100,7 +100,7 @@ while (booleano === true) {
         let booleano = true;
         while (booleano === true) {
             let menucategorias = prompt(`===============================
-                Menu de  categorías de hamburguesas - CATEGORIAS
+                Menu de  categorías
                 ===============================
                 Seleccione una opción:
                 1.Registrar nueva categoría
@@ -164,11 +164,11 @@ while (booleano === true) {
             };
         };
     }
-    if (menuprincipal === '2') {
+    else if (menuprincipal === '2') {
         let booleano = true;
         while (booleano === true) {
             let menuchefs = prompt(`===============================
-                Menu de  categorías de hamburguesas - CHEFS
+                Menu de chefs
                 ===============================
                 Seleccione una opción:
                 1.Registrar nuevo chef
@@ -231,7 +231,97 @@ while (booleano === true) {
                 booleano = false;
             };
         };
-    };
+    }
+    else if (menuprincipal === '3') {
+        let booleano = true;
+        while (booleano === true) {
+            let menucategorias = prompt(`===============================
+                Menu de hamburguesas
+                ===============================
+                Seleccione una opción:
+                1.Registrar nueva hamburguesa
+                2.Listar hamburguesas
+                3.Eliminar hamburguesa
+                4.Modificar hamburguesa
+                5.Salir
+                `);
+
+            if (menucategorias === '1') {
+                alert('Registrar nueva hamburguesa');
+                let nombre = prompt('Escriba el nombre de la hamburguesa que quiera agregar: ');
+                let categoria = prompt('Escriba la categoria de la nueva hamburguesa');
+                let ingredientes = prompt('Escriba los ingredientes de la nueva hamburguesa');
+                let precio = prompt('Escriba el precio de la nueva hamburguesa')
+                let chef = prompt('Escriba el nombre del chef que preparo la hamburguesa')
+
+                hamburguesas.push({
+                    "nombre": nombre,
+                    "categoria": categoria,
+                    "ingredientes" : ingredientes,
+                    "precio" : precio,
+                    "chef" : chef,
+                })
+
+            } else if (menucategorias === '2') {
+                alert('Listar hamburguesas');
+                let largo = hamburguesas.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "hamburguesa# " + (i + 1) + "\n" +
+                        "nombre: " + hamburguesas[i]["nombre"] + "\n" +
+                        "categoria: " + hamburguesas[i]["categoria"] + "\n" +
+                        "ingredientes: " + hamburguesas[i]["ingredientes"] + "\n" +
+                        "precio: " + hamburguesas[i]["precio"] + "\n" +
+                        "chef: " + hamburguesas[i]["chef"]
+                    )
+                }
+            } else if (menucategorias === '3') {
+                alert('Eliminar hamburguesa');
+                let largo = hamburguesas.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "hamburguesa# " + (i + 1) + "\n" +
+                        "nombre: " + hamburguesas[i]["nombre"] + "\n" +
+                        "categoria: " + hamburguesas[i]["categoria"] + "\n" +
+                        "ingredientes: " + hamburguesas[i]["ingredientes"] + "\n" +
+                        "precio: " + hamburguesas[i]["precio"] + "\n" +
+                        "chef: " + hamburguesas[i]["chef"]
+                    )
+                }
+                let eliminar = prompt('Ingrese el id de la hamburguesa que quiera eliminar');
+                hamburguesas.splice(eliminar - 1, 1);
+
+            } else if (menucategorias === '4') {
+                alert('Modificar categoria')
+                let largo = hamburguesas.length;
+                for (let i = 0; i < largo; i++) {
+                    alert(
+                        "hamburguesa# " + (i + 1) + "\n" +
+                        "nombre: " + hamburguesas[i]["nombre"] + "\n" +
+                        "categoria: " + hamburguesas[i]["categoria"] + "\n" +
+                        "ingredientes: " + hamburguesas[i]["ingredientes"] + "\n" +
+                        "precio: " + hamburguesas[i]["precio"] + "\n" +
+                        "chef: " + hamburguesas[i]["chef"]
+                    )
+                }
+                let num = prompt('Ingrese el numero de la hamburguesa que quera editar');
+                let nomb = prompt('Ingrese el nuevo nombre de la hamburguesa');
+                let categ = prompt ('Ingrese la categoria de la nueva hamburguesa');
+                let ingr= prompt('Ingrese los nuevos ingredientes de la nueva hamburguesa');
+                let prec = prompt('Ingrese el precio para la nueva hamburguesa');
+                let che = prompt('Ingrese el nombre del chef que preparo la hamburguesa');
+
+                hamburguesas[num -1]["nombre"]= nomb;
+                hamburguesas[num-1]["categoria"]= categ;
+                hamburguesas[num-1]["ingredientes"]= ingr;
+                hamburguesas[num-1]["precio"]= prec;
+                hamburguesas[num-1]["chef"]= che;
+                
+            } else if (menucategorias === '5') {
+                booleano = false;
+            };
+        };
+    }
 }
 
 
