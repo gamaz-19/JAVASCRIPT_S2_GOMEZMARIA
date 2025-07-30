@@ -22,7 +22,7 @@ function buscarResultados(){
                 let gender = (datos["gender"]);
                 let homeworld = (datos["homeworld"]);
                 let films = (datos ["films"][0])
-                document.write (films)
+                document.write (name+ height+films)
 
 
             }
