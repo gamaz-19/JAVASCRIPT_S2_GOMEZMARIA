@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
-    <div class="imagenfondo">
-        <img class="big" src="./media/pokedex.png" alt="">
-    </div>
-    <div id="data" class="data">
-        <h1 id="idPoke" class="idPoke">num - </h1>
-        <h1 id="nomPoke" class="nomPoke"> nombre</h1>
-    </div>
-    <div id="input" class="input">
-        <input class="cuadro" type="text" placeholder="Name or Number"> 
-    </div>
-    <div id="buttons" class="buttons">
-        <button id="prevB" class="prevB"></button>
-        <button id="nextB" class="nextB"></button>
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+    </head>
+    <body>
+        <div class="imagenfondo">
+            <img class="big" src="./media/pokedex.png" alt="">
+        </div>
+        <div id="data" class="data">
+            
+        </div>
+        <div id="input" class="input">
+            <input id="cuadro" class="cuadro" type="text" placeholder="Name or Number" > 
+        </div>
+        <div id="buttons" class="buttons">
+            <button id="prevB" class="prevB" onclick="siguiente(idPoke)"> < Prev </button>
+            <button id="nextB" class="nextB" onc="atras(idPoke)"> Next > </button>
+        </div>
 
-</body>
-<script src="./scripts/script.js"></script>
-</html>
+    </body>
+    <script src="./scripts/script.js"></script>
+    </html>

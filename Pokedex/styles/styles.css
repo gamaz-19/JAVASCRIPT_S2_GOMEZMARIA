@@ -37,16 +37,22 @@ font-family: 'Oxanium', cursive;
     font-size: 2.5vw;
 }
 .input{
+    display: absolute;
     align-items: center;
     text-align: center;
     margin-top: 3.5vw;
     margin-left: -3vw;
 }
+
+
 .cuadro{
+    display: absolute;
     width: 25vw;
     height: 3.5vw;
     box-shadow: -3px 4px 2px grey;
     border-radius: 5px;
+    padding-left: 1vw;
+    font-size: 1.8vw;
 }
 
 .buttons{
@@ -55,7 +61,6 @@ font-family: 'Oxanium', cursive;
     margin-top: 5.5vw;
     margin-left: -2vw;
     gap: 1.5vw;
-
 }
 .prevB{
     width: 12vw;
@@ -63,6 +68,8 @@ font-family: 'Oxanium', cursive;
     background-color: #424242;
     box-shadow: -3px 4px 2px #191317;
     border-radius: 5px;
+    color: white;
+    font-size: 1.8vw;
 }
 .nextB{
     width: 12vw;
@@ -70,4 +77,6 @@ font-family: 'Oxanium', cursive;
     background-color: #424242;
     box-shadow: -3px 4px 2px #191317;
     border-radius: 5px;
+    color: white;
+    font-size: 1.8vw;
 }
