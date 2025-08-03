@@ -1,9 +1,17 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@font-face {
+    font-family: 'poker';
+    src: url(/Cartas/fonts/JqkasWild-w1YD6.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'title';
+    src:url(../fonts/PokerInOctoberDemo-Dxm3.otf);
+    font-weight: normal;
 }
 
 body {
     background-image: url(../media/background.jpg);
+    /*background-image: url(../media/blue.avif);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,21 +27,22 @@ body {
     align-items: center;
     align-content: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.466);
-    margin: -25vw 15vw 0vw 16vw;
-    padding: 3vw 6vw 3vw 6vw;
+    background-color: rgba(26, 25, 29, 0.582);
+    margin: -22vw 15vw 0vw 16vw;
+    padding: 3vw 6vw 1vw 6vw;
     box-shadow: 5px 5px 35px rgba(204, 204, 204, 0.528);
     border-color: white;
     border-radius: 5vw;
 }
 
 .titulo {
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 200 px;
     text-align: center;
     text-shadow: 15px 15px 55px rgb(255, 255, 255);
     font-size: 3vw;
-    margin: 5vw 0vw 8vw 0vw;
+    margin: 2vw 0vw 8vw 0vw;
+    font-family: 'title';
 }
 
 .titulo {
@@ -62,13 +71,13 @@ body {
 
 .iniciar {
     font-size: 3vw;
-    margin: 1vw 6vw 0vw 6vw;
     background-color: rgba(75, 75, 75, 0.57);
     color: white;
     text-decoration: none;
     border-radius: 2vw;
-    box-shadow: -8px 10px 20px rgba(204, 204, 204, 0.3);
-    padding: 1.5vw 1vw 1.5vw 1vw;
+    padding: 1.5vw 3vw 1.5vw 3vw;
+    font-family: 'poker';
+    letter-spacing: 0.5vw;
 }
 
 .iniciar:hover {
@@ -77,12 +86,16 @@ body {
 
 .textstart {
     font-size: 1.7vw;
-    margin: 0vw 0vw 1vw -20;
+    padding: 2vw;
+    font-family: 'poker';
+    letter-spacing: 0.5vw;
+
 }
 
 .how {
+    font-family: poker;
     font-size: 2vw;
-    margin: 3vw 18vw 0vw -20vw;
+    margin: 0vw 18vw 0vw -20vw;
     color: white;
     text-decoration: none;
     padding: 1.5vw 4vw 1.5vw 4vw;
@@ -99,12 +112,19 @@ body {
 
 .cartas {
     position: absolute;
-    width: 50vw;
-    transform: rotate(-20deg);
-    margin-top: -19vw;
-    margin-left: 4vw;
+    width: 25vw;
+    transform: rotate(20deg);
+    margin-top: -20vw;
+    margin-left: 12vw;
 }
 
 .cartas:hover{
-    transform: rotate(45deg);
+    transform: rotate(5deg);
+}
+
+.monedas{
+    position: absolute;
+    width: 25vw;
+    margin-top: -52vw;
+    margin-left: -42vw;
 }

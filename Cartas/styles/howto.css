@@ -1,5 +1,17 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*
+background-image: url(../media/blue.avif);
+    background-color: rgba(13, 11, 37, 0.582);
+
+*/
+@font-face {
+    font-family: 'poker';
+    src: url(/Cartas/fonts/JqkasWild-w1YD6.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'title';
+    src:url(../fonts/PokerInOctoberDemo-Dxm3.otf);
+    font-weight: normal;
 }
 
 body {
@@ -32,8 +44,9 @@ body {
     letter-spacing: 200 px;
     text-align: center;
     text-shadow: 15px 15px 55px rgb(255, 255, 255);
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 5vw 0vw 8vw 0vw;
+    font-family: 'title';
 }
 
 .titulo {
@@ -60,7 +73,10 @@ body {
 }
 .rules{
     margin-top: -4vw;
-        font-size: 2vw;
+    font-size: 2vw;
+    font-family: 'poker';
+    margin: 3vw 0vw 3vw 0vw;
+    padding: 1vw 2vw 0vw 2vw;
 }
 .iniciar {
     font-size: 3vw;
