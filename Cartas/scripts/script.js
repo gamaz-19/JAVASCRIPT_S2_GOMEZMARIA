@@ -20,8 +20,8 @@ function barajaNueva() {
 }
 barajaNueva();
 
+//console.log(`Carta: ${cartaNueva["cards"][0]["value"]} de ${cartaNueva["cards"][0]["suit"]}`);
 
-//<p>Carta: ${cartaNueva["cards"][0]["value"]} de ${cartaNueva["cards"][0]["suit"]}</p>
 function pedirCarta() {
     if (!deckId) {
         console.error("Primero debes crear un deck");
@@ -37,13 +37,14 @@ function pedirCarta() {
             if (xhr.status === 200) {
                 try {
                     const cartaNueva = JSON.parse(xhr.responseText);
-
+                    
                     if (cartaNueva.cards && cartaNueva.cards.length > 0) {
                         let cartaMostrar = cartaNueva["cards"][0]["images"]["png"];
-
+                        
                         document.getElementById("card").innerHTML = `
-                            <img src="${cartaMostrar}" alt="Carta ${cartaNueva["cards"][0]["code"]}">
+                        <img src="${cartaMostrar}" alt="Carta ${cartaNueva["cards"][0]["code"]}">
                         `;
+                        
                     } else {
                         document.getElementById("card").innerHTML = `<p>No hay más cartas en el deck</p>`;
                     }
@@ -66,14 +67,14 @@ setTimeout(() => {
     pedirCarta();
 }, 1000);
 
-function getCardValue(card) {
+function valorcartaT(valorcarta) {
+    let valorcarta = (`cartaNueva["cards"][0]["value"]}`);
     const value = card.value;
     if (value === 'ACE') return 1;
     if (value === 'JACK') return 11;
     if (value === 'QUEEN') return 12;
     if (value === 'KING') return 13;
     return parseInt(value);
-    console.log(parseInt(value));
 }
 const menor = document.getElementById('mayormenor');
 menor.addEventListener('click', function () {
