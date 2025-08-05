@@ -18,7 +18,10 @@ function barajaNueva() {
     }
     xhr.send();
 }
+barajaNueva();
 
+
+//<p>Carta: ${cartaNueva["cards"][0]["value"]} de ${cartaNueva["cards"][0]["suit"]}</p>
 function pedirCarta() {
     if (!deckId) {
         console.error("Primero debes crear un deck");
@@ -39,7 +42,6 @@ function pedirCarta() {
                         let cartaMostrar = cartaNueva["cards"][0]["images"]["png"];
 
                         document.getElementById("card").innerHTML = `
-                            <p>Carta: ${cartaNueva["cards"][0]["value"]} de ${cartaNueva["cards"][0]["suit"]}</p>
                             <img src="${cartaMostrar}" alt="Carta ${cartaNueva["cards"][0]["code"]}">
                         `;
                     } else {
@@ -58,8 +60,16 @@ function pedirCarta() {
     
     xhr.send();
 }
-barajaNueva();
+pedirCarta ();
 
 setTimeout(() => {
     pedirCarta();
 }, 1000);
+
+const menor = document.getElementById('mayormenor');
+menor.addEventListener('click', function () {
+    if (menor > 1) {
+        menor -= 1;
+        pedirCarta();
+    }
+});

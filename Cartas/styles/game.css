@@ -76,3 +76,8 @@ body {
     letter-spacing: 0.5vw;
 }
 
+
+.card img{
+    width: 10vw;
+    margin: 0vw;
+}
