@@ -27,7 +27,7 @@ function pedirCarta() {
         console.error("Primero debes crear un deck");
         return;
     }
-    
+
     let xhr = new XMLHttpRequest();
     let url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`;
     xhr.open("GET", url, true);
@@ -37,7 +37,7 @@ function pedirCarta() {
             if (xhr.status === 200) {
                 try {
                     const cartaNueva = JSON.parse(xhr.responseText);
-                    
+
                     if (cartaNueva.cards && cartaNueva.cards.length > 0) {
                         let cartaMostrar = cartaNueva["cards"][0]["images"]["png"];
 
@@ -57,15 +57,24 @@ function pedirCarta() {
             }
         }
     }
-    
+
     xhr.send();
 }
-pedirCarta ();
+pedirCarta();
 
 setTimeout(() => {
     pedirCarta();
 }, 1000);
 
+function getCardValue(card) {
+    const value = card.value;
+    if (value === 'ACE') return 1;
+    if (value === 'JACK') return 11;
+    if (value === 'QUEEN') return 12;
+    if (value === 'KING') return 13;
+    return parseInt(value);
+    console.log(parseInt(value));
+}
 const menor = document.getElementById('mayormenor');
 menor.addEventListener('click', function () {
     if (menor > 1) {
