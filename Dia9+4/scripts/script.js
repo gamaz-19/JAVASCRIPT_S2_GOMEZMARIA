@@ -23,9 +23,9 @@ function buscarPersonaje() {
                         let division = document.getElementById("resultados");
                         division.innerHTML+= `
                         <div class="card">
-                            <img src="${data["results"]["image"]}" alt="">
+                            <img src="${data["results"][i]["image"]["url"]}">
                             <h3>${data["results"][i]["name"]}</h3>
-                            <p><strong>Status:</strong>${data["results"][i]["id"]}</p>
+                            <p><strong>ID:</strong>${data["results"][i]["id"]}</p>
                         </div>`
                         console.log(data)
                     };
