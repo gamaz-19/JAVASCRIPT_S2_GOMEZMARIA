@@ -18,17 +18,15 @@ body {
     min-height: 100vh;
     align-items: center;
     align-content: center;
+    text-align: center;
 }
 
 .main {
     position: absolute;
     color: white;
-    align-items: center;
-    align-content: center;
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.466);
-    margin: -25vw 15vw 0vw 16vw;
-    padding: 3vw 6vw 3vw 6vw;
+    margin: -20vw 5vw 5vw 25vw;
+    padding: 3vw 9vw 3vw 9vw;
     box-shadow: 5px 5px 35px rgba(204, 204, 204, 0.528);
     border-color: white;
     border-radius: 5vw;
@@ -39,8 +37,8 @@ body {
     letter-spacing: 200 px;
     text-align: center;
     text-shadow: 15px 15px 55px rgb(255, 255, 255);
-    font-size: 2vw;
-    margin: 5vw 0vw 8vw 0vw;
+    font-size: 1vw;
+    margin: 1vw 5vw 20vw 5vw;
     font-family: 'title';
 }
 
@@ -57,14 +55,12 @@ body {
     }
 }
 
-
 .drill {
     color: white;
-    text-decoration: none;
-    padding: 1.5vw 4vw 1.5vw 4vw;
-    border-radius: 2vw;
+    padding: 0vw 4vw 0vw 4vw;
     text-shadow: 15px 15px 55px rgba(255, 255, 255, 0.819);
     font-family: 'poker';
+    background-color: pink;
 }
 
 .drill h2{
@@ -76,7 +72,11 @@ body {
     letter-spacing: 0.5vw;
 }
 
-
+.card{
+    position: absolute;
+    background-color: green;
+    margin: -18vw 0vw 0vw 10vw;
+}
 .card img{
     width: 10vw;
     margin: 0vw;

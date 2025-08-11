@@ -67,7 +67,10 @@ setTimeout(() => {
     pedirCarta();
 }, 1000);
 
-function valorcartaT(valorcarta) {
+
+
+
+/*function valorcartaT(valorcarta) {
     let valorcarta = (`cartaNueva["cards"][0]["value"]}`);
     const value = card.value;
     if (value === 'ACE') return 1;
@@ -82,4 +85,4 @@ menor.addEventListener('click', function () {
         menor -= 1;
         pedirCarta();
     }
-});
+}); */
